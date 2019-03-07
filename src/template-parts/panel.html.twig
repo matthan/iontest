@@ -1,0 +1,17 @@
+<section class="panel panel-blocks">
+    <div class="container">
+        <div class="panel-content-wrap">
+            <h2>{{ panel.heading }}</h2>
+            {{ panel.description }}
+        </div>
+        <div class="col-blocks">
+            {% for block in panel.blocks %}
+                <div class="col-block">
+                    <i class="block-icon icon-{{ block.icon }}"></i>
+                    <h3 class="block-heading">{{ block.heading }}</h3>
+                    {{ block.desc }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

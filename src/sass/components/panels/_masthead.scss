@@ -1,0 +1,23 @@
+.masthead {
+    padding: 60px 0;
+    color: palette(white);
+    text-align: center;
+    background: {
+        position: 50% -18px;
+        size: auto 110%;
+        repeat: no-repeat;
+    }
+
+    @include breakpoint($tablet) {
+        padding: 90px 0;
+    }
+
+    @include breakpoint($desktop) {
+        padding: 120px 0;
+    }
+
+    .masthead-header {
+        margin-bottom: 0;
+        text-transform: uppercase;
+    }
+}

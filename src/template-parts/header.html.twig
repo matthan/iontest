@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="navigation">
+        <div class="header-logo">
+            <a class="home-link" href="/" title="{{ site.title }}" rel="home">
+                <img src="images/logo@2x.png" alt="{{ site.title }}">
+            </a>
+        </div>
+
+        <!-- Header Navigation -->
+        <nav class="navbar navbar-default header-nav">
+            <div id="mobile-menu-header">
+                <span id="close-mobile-menu" class="icon-cancel"></span>
+            </div>
+            <div id="primary-nav" class="collapse navbar-collapse">
+
+                {% if primary_nav %}
+                    <ul id="menu-primary-menu" class="nav navbar-nav">
+                        {% for item in primary_nav.items %}
+                            <li id="menu-item-{{ loop.index }}" class="menu-item">
+                                <a href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                        {% endfor %}
+                        <li class="quick-link">
+                            <a class="btn btn-nav" href="{{ primary_nav.quicklink_link }}">{{ primary_nav.quicklink_title }}</a>
+                        </li>
+                    </ul>
+                {% endif %}
+
+            </div>
+        </nav>
+
+        <div id="mobile-toggle" class="navbar-header">
+            <button type="button" id="open-mobile-menu" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#navbar">
+                <span class="sr-text">Toggle Navigation</span>
+                <span class="icon-menu"></span>
+            </button>
+        </div>
+    </div>
+</div>

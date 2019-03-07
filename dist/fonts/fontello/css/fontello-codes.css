@@ -1,0 +1,25 @@
+
+.icon-cog:before { content: '\e800'; } /* '' */
+.icon-search:before { content: '\e801'; } /* '' */
+.icon-heart:before { content: '\e802'; } /* '' */
+.icon-star:before { content: '\e803'; } /* '' */
+.icon-home:before { content: '\e804'; } /* '' */
+.icon-link:before { content: '\e805'; } /* '' */
+.icon-location:before { content: '\e806'; } /* '' */
+.icon-phone:before { content: '\e807'; } /* '' */
+.icon-mail:before { content: '\e808'; } /* '' */
+.icon-cancel:before { content: '\e809'; } /* '' */
+.icon-link-ext:before { content: '\f08e'; } /* '' */
+.icon-twitter:before { content: '\f099'; } /* '' */
+.icon-facebook:before { content: '\f09a'; } /* '' */
+.icon-menu:before { content: '\f0c9'; } /* '' */
+.icon-linkedin:before { content: '\f0e1'; } /* '' */
+.icon-code:before { content: '\f121'; } /* '' */
+.icon-html5:before { content: '\f13b'; } /* '' */
+.icon-css3:before { content: '\f13c'; } /* '' */
+.icon-stackoverflow:before { content: '\f16c'; } /* '' */
+.icon-apple:before { content: '\f179'; } /* '' */
+.icon-wordpress:before { content: '\f19a'; } /* '' */
+.icon-drupal:before { content: '\f1a9'; } /* '' */
+.icon-file-pdf:before { content: '\f1c1'; } /* '' */
+.icon-git:before { content: '\f1d3'; } /* '' */

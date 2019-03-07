@@ -1,0 +1,93 @@
+{% set site = { title: 'Ion Test by Matthan Heiselt' } %}
+{% set primary_nav = {
+    items: [
+        {
+            link: '#',
+            title: 'About'
+        },
+        {
+            link: '#',
+            title: 'Services'
+        },
+        {
+            link: '#',
+            title: 'Careers'
+        },
+        {
+            link: '#',
+            title: 'Blog'
+        }
+    ],
+    quicklink_link: '#',
+    quicklink_title: 'Contact'
+}
+%}
+{% set masthead = {
+bgimage: 'hero',
+heading: 'This is the Hero Section',
+description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>',
+btn_text: 'CTA Button',
+btn_url: '#'
+}
+%}
+{% set panel = {
+    heading: 'This is the H2 for the page',
+    description: '<p>Tempus adipiscing commodo ut aliquam blandit</p>',
+    blocks: [
+        {
+            icon: 'wordpress',
+            heading: 'Wordpress',
+            desc: '<p>Eu non col commondo accumsan ante mi. Commodo consectetur sed me adipiscing accumansan accunuc tincidunt loborits.</p>'
+        },
+        {
+            icon: 'drupal',
+            heading: 'Drupal',
+            desc: '<p>Eu non col commondo accumsan ante mi. Commodo consectetur sed me adipiscing accumansan accunuc tincidunt loborits.</p>'
+        },
+        {
+            icon: 'code',
+            heading: 'Code',
+            desc: '<p>Eu non col commondo accumsan ante mi. Commodo consectetur sed me adipiscing accumansan accunuc tincidunt loborits.</p>'
+        }
+    ]
+}
+%}
+
+<!doctype html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <title>{{ site.title }}</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer="defer"></script>
+    <script src="js/scripts.js" type="text/javascript" defer="defer"></script>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <header id="header" class="nav-down">
+            {% block header %}
+
+                {% include 'template-parts/header.html.twig' %}
+
+            {% endblock %}
+        </header>
+
+        {% block main %}
+        <main class="content-main">
+
+            {% include 'template-parts/masthead.html.twig' %}
+
+            {% include 'template-parts/panel.html.twig' %}
+
+        </main>
+        {% endblock %}
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+// Color map
+$COLORS: (
+    cyan: (
+        base: #4ac1ff,
+		dark: #3aa0d5,
+    ),
+    yellow: (
+        base: #fffa64,
+    ),
+    red: (
+        base: #ff0000,
+    ),
+    purple: (
+        base: #b162f4,
+    ),
+    grey: (
+        lighter: #bbbbbb,
+        light: #cbcfd3,
+        base: #666f77, // slate grey
+        dark: #2f2f2f,
+    ),
+    white: (
+        base: #fdfdfd, // Use slightly off-white
+        pure: #fff,
+        dark: #fafafa,
+    ),
+    black: (
+        base: #020202, // Use slightly off-white
+        pure: #000,
+    ),
+);
+
+// Palette color map retrieval function - written by Ryan Scotton
+@function palette($color, $shade: base) { // Default shade: base
+    // Return warning if color is invalid
+    @if not map-has-key($COLORS, $color) {
+        @warn "There is no color mapped to '#{$color}'";
+        @return null;
+    }
+
+    // Grab shade map for given color
+    $color-map: map-get($COLORS, $color);
+    // Return warning if shade is invalid
+    @if not map-has-key($color-map, $shade) {
+        @warn "There is no '#{$shade}' for the color '#{$color}'";
+        @return null;
+    }
+
+    // Return the proper shade
+    @return map-get($color-map, $shade);
+}
+
+$color-text: palette(grey);
+$color-link: palette(cyan);
+$color-link-hover: palette(purple);

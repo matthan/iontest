@@ -1,0 +1,28 @@
+.btn {
+  display: inline-block;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  padding: 14px 46px;
+  color: palette(white);
+  font-size: 17px;
+  line-height: 17px;
+  text-transform: uppercase;
+  background-color: palette(cyan);
+  transition: background-color $duration ease-in-out, transform $duration ease-in-out, box-shadow $duration ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        color: palette(white);
+        box-shadow: inset 0 0 0 3px palette(cyan);
+        background-color: palette(cyan, dark);
+        transform: scale(1.02);
+    }
+
+    &.btn-nav {
+        margin-bottom: 0;
+        padding: 13px 27px;
+        font-size: 17px;
+        text-transform: uppercase;
+    }
+
+}

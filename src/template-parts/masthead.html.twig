@@ -1,0 +1,11 @@
+<section class="masthead" style="background-image: url('images/{{ masthead.bgimage }}')">
+    <div class="container">
+        <div class="masthead-content-wrap">
+            <h1 class="masthead-header page-title">{{ masthead.heading }}</h1>
+            {{ masthead.description }}
+            {% if masthead.btn_url %}
+                <a class="btn" href="{{ masthead.btn_url }}">{{ masthead.btn_text ?: 'Button' }}</a>
+            {% endif %}
+        </div>
+    </div>
+</section>

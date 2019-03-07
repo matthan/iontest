@@ -1,0 +1,144 @@
+.header-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: rgba(palette(black), 0.9);
+    transition: top $duration, opacity $duration;
+
+    @include breakpoint($tablet) {
+        position: relative;
+        display: inline-block;
+        width: auto;
+        float: right;
+        background-color: transparent;
+        overflow: visible;
+    }
+}
+
+.header-nav-visible {
+    display: block;
+
+    @include breakpoint($tablet) {
+        display: inherit;
+    }
+}
+
+.header-nav-opaque {
+    opacity: 1;
+}
+
+.mobile-menu-is-open {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100%;
+
+    @include breakpoint($tablet) {
+        overflow: visible;
+        height: auto;
+    }
+}
+
+#mobile-menu-header {
+    display: inline-block;
+    height: $header-height;
+    padding-top: 36px;
+    padding-bottom: 20px;
+    background-color: palette(cyan);
+    width: 100%;
+
+    #close-mobile-menu {
+        float: right;
+        margin-right: 22px;
+        color: palette(white);
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    @include breakpoint($tablet) {
+        display: none;
+    }
+}
+
+#primary-nav {
+    display: block;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    > ul {
+        margin: 20px;
+        text-align: right;
+
+        > li {
+            display: block;
+            position: relative;
+            margin: 15px 0;
+            vertical-align: middle;
+
+            &.menu-item > a {
+                position: relative;
+                padding: 5px 15px;
+                color: palette(white);
+                font-size: 28px;
+                text-transform: uppercase;
+
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+                    height: 3px;
+                    width: 0;
+                    background-color: palette(cyan);
+                    bottom: 0;
+                    left: 10px;
+                    transition: width 0.3s;
+                }
+
+                &:hover::before {
+                    width: calc(100% - 20px);
+                }
+            }
+
+            &.quick-link {
+                margin: 30px 12px 10px 10px;
+            }
+        }
+    }
+
+    @include breakpoint($tablet) {
+        > ul {
+            margin: 0;
+            text-align: left;
+
+            > li {
+                position: relative;
+                display: inline-block;
+                margin: 0;
+
+                &.menu-item > a {
+                    color: palette(grey);
+                    font-size: 18px;
+                }
+
+                &.quick-link {
+                    margin: 0 0 0 10px;
+                }
+            }
+        }
+
+        > ul li.menu-item-has-children:hover .sub-menu {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}

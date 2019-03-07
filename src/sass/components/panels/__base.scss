@@ -1,0 +1,12 @@
+.panel {
+    margin: 30px 0;
+
+    @include breakpoint($tablet) {
+        margin: 50px 0;
+    }
+
+    @include breakpoint($desktop) {
+        margin: 70px 0;
+    }
+}
+
